@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9d52fec3ca5f144bbdc34c7af9038dc, type: 3}
+  m_Name: IntroDialogue
+  m_EditorClassIdentifier: 
+  lines:
+  - characterSprite: {fileID: 21300000, guid: f6a44aeaa445d9e418954f9237260339, type: 3}
+    sentence: Eita, onde estou, por que tem um enorme texto aqui em cima de mim
+  - characterSprite: {fileID: 21300000, guid: f6a44aeaa445d9e418954f9237260339, type: 3}
+    sentence: Que seja, vou dar um fora daqui
