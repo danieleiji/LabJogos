@@ -44,7 +44,7 @@ public class GerenciaJogo : MonoBehaviour // Use o nome CORRETO do seu script
         }
 
         //Pausa a bola
-        ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        ball.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         ball.GetComponent<Rigidbody2D>().isKinematic = true;
 
         //Destroi os objetos que não vai mais utilizar, para poupar processamento.

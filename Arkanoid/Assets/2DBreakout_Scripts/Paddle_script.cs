@@ -24,7 +24,7 @@ public class Paddle_script : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(moveHorizontal, 0f);
-        rb2D.velocity = movement * paddleSpeed;
+        rb2D.linearVelocity = movement * paddleSpeed;
 
         rb2D.position = new Vector2(Mathf.Clamp(rb2D.position.x, boundary.xMin, boundary.xMax), -4f);
     }

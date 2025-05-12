@@ -21,7 +21,7 @@ public class BallController : MonoBehaviour
     {
         if (ballInPlay)
         {
-            lastVelocity = rb.velocity;
+            lastVelocity = rb.linearVelocity;
             ClampVelocity();
         }
     }
@@ -52,20 +52,20 @@ public class BallController : MonoBehaviour
     private void ReflectBall(Vector2 normal)
     {
         Vector2 reflectedVelocity = Vector2.Reflect(lastVelocity.normalized, normal);
-        rb.velocity = reflectedVelocity * lastVelocity.magnitude;
+        rb.linearVelocity = reflectedVelocity * lastVelocity.magnitude;
     }
 
     private void ClampVelocity()
     {
-        float currentSpeed = rb.velocity.magnitude;
+        float currentSpeed = rb.linearVelocity.magnitude;
 
         if (currentSpeed < minSpeed)
         {
-            rb.velocity = rb.velocity.normalized * minSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * minSpeed;
         }
         else if (currentSpeed > maxSpeed)
         {
-            rb.velocity = rb.velocity.normalized * maxSpeed;
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
         }
     }
 }
